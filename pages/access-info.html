@@ -1,0 +1,49 @@
+<div ng-controller="accessController">
+
+<div class="row">
+	<div class="col-md-12 text-center">
+
+        <a href="#/"><span class="glyphicon glyphicon-home nav-icons"></span></a>
+        <a href="#/"><span class="glyphicon glyphicon-backward nav-icons"></span></a>
+        <br/>
+		<h5 class="page-heading">App-to-service Access Information</h5>
+        <br/>   
+        <!-- <p>Please select the app from this dropdown to see the list of services it has accessed this week:</p>
+		<select class="form-control" class="app-dropdown" 
+            ng-model="appname" 
+            ng-change="getServices(appname)" 
+            ng-options="appname as appname.name for appname in apps">
+            <option>Please Select App</option>
+        </select>
+        <br/> -->
+<!-- 		<p>The above selected app accessed all the following listed services this week</p> -->
+	</div>
+</div>
+
+<div class="row">
+    
+<!--     <div class="col-md-12 text-center" ng-show="!(appServices| filter:nameText).length">
+        <h1 class="page-heading">No Data Found</h1>
+        <p>Please select another app to see what they accessed.</p>
+    </div> -->
+    
+	<div class="col-md-12">
+		<ul class="nav nav-pills nav-stacked services-accessed-ul">
+			<li ng-repeat="a in apps" class="accessed-list">
+                    <b>{{a.name}}</b>
+                    <div ng-show="appServices[a.name].length">
+                        <span ng-repeat="s in appServices[a.name]" class="accessing-service"> 
+                            <a href="#/frequency/{{a.name}}/{{s}}">{{s}} 
+                                <span class="glyphicon glyphicon-chevron-right pull-right"></span> 
+                            </a>
+                        <span>
+                    </div>
+                    <p ng-hide="appServices[a.name].length > 0" class="no-service">No Service accessed so far</p>
+            </li>
+		</ul>
+	</div>
+</div>
+
+<br/>
+
+</div>

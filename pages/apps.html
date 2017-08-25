@@ -1,0 +1,12 @@
+<div class="text-center">
+	<a href="#/"><span class="glyphicon glyphicon-home nav-icons"></span></a>
+</div>
+<br/>
+<h1 class="page-heading">Here's the list of installed Applications</h1>
+
+<p> Click on the app name to see or change the default access limit set to different services.</p>
+
+<ul id="app-list">
+  <li ng-repeat="a in apps"> <a href="#/app-detail/{{a.name}}">{{a.name}}</a></li>
+</ul>
+

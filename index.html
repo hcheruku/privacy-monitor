@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+      <!-- This source code is written for Privacy Monitor app, as a part of our master's project at SFSU. 
+      All rights reserved to CS department - SFSU -->
+ 
+<head>
+   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+   <meta charset="utf-8">
+
+   <title>Privacy Monitor</title>
+
+   <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+   <link href="css/bootstrap-material-design.min.css" rel="stylesheet" type="text/css"> 
+   <link href="css/ripples.min.css" rel="stylesheet" type="text/css">
+   <link href="css/chartist.min.css" rel="stylesheet" type="text/css"> 
+   <link href="css/app.css" rel="stylesheet" type="text/css">
+   <link href="css/nav.css" rel="stylesheet" type="text/css">
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+   <link href="css/icons/foundation-icons.css" rel="stylesheet" type="text/css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+
+<body ng-app="privacyApp">
+
+  <div id="box">
+     <ul id="sidebar-menu">
+      <li class="active"><a href="#/how-it-works">How our app works?</a></li>
+      <li><a href="#/faq">FAQ</a></li>
+      <li><a href="#/terms-of-use">Terms of Use</a></li>
+      <li><a href="#/policy">Privacy Policy</a></li>
+      <li><a href="#/about">About the App</a></li>
+      <li><a href="#/contact-us">Contact Us</a></li>
+
+      <hr class="menu-hr">
+
+      <li><a href="#/defaults">Default Settings</a></li>
+      <li><a href="#/apps">Edit Access Frequency</a></li>
+    </ul>
+  </div>
+    
+    
+  <div id="btn">
+    <div id='top'></div>
+    <div id='middle'></div>
+    <div id='bottom'></div>
+  </div>
+
+
+
+  <header data-role="header">
+    <h1 class="title-h1">Privacy Monitor</h1> 
+  </header>
+
+  <div class="container" id="main">
+    <div ng-view>
+      <a href="#/"><span class="glyphicon glyphicon-home"></span></a>
+    </div>
+  </div>
+  
+  
+  <footer data-role="footer">
+    <span> Department of Computer Science <br/> 
+      <b>San Francisco State University</b>
+    </span>
+  </footer>
+
+
+   <!-- All JavaScript files here  -->  
+   <script src="js/jquery-2.1.4.min.js"></script>
+
+   <!-- All Angular files here -->
+   <script src="js/angular.min.js"></script>
+   <script src="js/angular-route.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script src="js/material.min.js"></script>
+   <script src="js/ripples.min.js"></script>
+   <script src="js/Dexie.js"></script>
+   <script src="js/ngDexie.js"></script>
+   <!-- <script src="js/sample-data.js"></script>          // used to add fake data to indexed db so we can see it in the simulator -->
+   <script src="js/d3.min.js"></script>
+   <script src="js/angular-charts.min.js"></script>
+   <script src="js/defaults.js"></script>
+   <script src="js/app.js"></script>
+
+</body>
+
+</html>
+

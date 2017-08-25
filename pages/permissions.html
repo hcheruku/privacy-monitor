@@ -1,0 +1,23 @@
+<div class="ui-content text-center" role="main"> 
+        <a href="#/"><span class="glyphicon glyphicon-home nav-icons"></span></a>
+        <a href="#/apps"><span class="glyphicon glyphicon-backward nav-icons"></span></a> 
+</div>
+    <br/>
+<div>
+    <h2 id="app-name" class="page-heading">{{appname}}</h2>
+    <p class="text-center"><strong>has access to the following services: </strong></p>
+    <p class="text-center">The slidebar below shows the access limit to different services (per hour) for this app. These limits are set as defaults in the indexedDB within your phone. You can always change the access limit by dragging the slidebar to update the default value in the database. The Privacy Monitor app will notify you if this app exceeds the limit set to these services.<br/> 
+    Thank you ! </p>
+<div>
+<br/>
+
+        <div ng-repeat="p in perms">
+
+            <b>{{p.permission}}</b> [{{p.limiter}}]<br/>
+            <input type="range" value="{{p.limiter}}" ng-model="p.limiter" ng-change="changeLimit(p)" />
+            <br/>
+        </div>
+        
+     </div>
+
+    </div>

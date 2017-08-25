@@ -1,0 +1,23 @@
+<div class="ui-content text-center" role="main">
+  <a href="#/"><span class="glyphicon glyphicon-home nav-icons"></span></a>
+  <span class="glyphicon glyphicon-refresh nav-icons" ng-click="reloadApp();"></span>
+  <a href="#/access-info" class="btn btn-raised btn-primary statistics" data-transition="slide" style="width: 100%; padding: 8px 15px;">
+      View Complete Statistics &nbsp;
+      <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>       
+<br/>
+</div>
+    
+  <div class="row">
+     <div class="col-md-12">
+            <br/>
+       <p class="text-center"> Below is the number of times few services are accessed by different apps <br/>this week: </p>
+            
+        <div class="info-box" ng-repeat="p in perms">
+            <h3>{{p.counter}}</h3>
+            <span>{{p.name}}</span>
+        </div>
+
+     </div>
+  </div>  
+        

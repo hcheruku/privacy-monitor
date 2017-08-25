@@ -1,0 +1,118 @@
+{
+  "name": "Privacy Monitor",
+  "description": "Privacy Monitor - SFSU Grad Project",
+  "launch_path": "/index.html",
+  "icons":{
+    "16": "icons/privacyMonitor_16.png",
+    "24": "icons/privacyMonitor_24.png",
+    "32": "icons/privacyMonitor_32.png",
+    "48": "icons/privacyMonitor_48.png",
+    "60": "icons/privacyMonitor_60.png",
+    "64": "icons/privacyMonitor_64.png",
+    "72": "icons/privacyMonitor_72.png",
+    "76": "icons/privacyMonitor_76.png",
+    "96": "icons/privacyMonitor_96.png",
+    "128": "icons/privacyMonitor_128.png",
+    "152": "icons/privacyMonitor_152.png",
+    "256": "icons/privacyMonitor_256.png",
+    "512": "icons/privacyMonitor_512.png"
+  },
+    
+  "csp" : "default-src *; script-src 'self'; object-src 'none'; style-src 'self'",
+
+  "developer":{
+    "name": "SFSU CS Grad Project - Spring/Fall 2015",
+    "url": "cs.sfsu.edu",
+    "email": "harshac@mail.sfsu.edu"
+  },
+    
+  "default_locale": "en-US",
+  
+  "type": "certified",
+
+  "installs_allowed_from": ["*"],
+    
+  "locales":{
+    "en-US":{
+      "name": "Privacy Monitor",
+      "description": "Privacy Monitor App - by SFSU CS Dept."
+    }
+  },
+
+  "messages":[
+    { "notification": "/index.html" },
+    { "alarm": "/index.html" },
+    { "privacy-request-notification": "/index.html"}
+  ],
+
+  "orientation": "default",
+    
+  "splashscreen":{
+    "alt": "Privacy Monitor - SFSU CS Project",
+    "srcset": "/splash-screen/splashScreen.png",
+    "background": "#333333"
+  },
+
+  "version": "1.8",
+
+  "permissions":{
+    "attention":{},
+    "audio-capture":{},
+    "audio-channel-alarm":{},
+    "audio-channel-notification":{},
+    "backgroundservice":{},
+    "bluetooth":{},
+    "browser":{},
+    "contacts":{"access": "readwrite"},
+    "desktop-notification":{},
+    "downloads":{},
+    "device-storage:pictures":{ "access": "readwrite" },
+    "device-storage:music":{ "access": "readwrite" },
+    "device-storage:videos":{ "access": "readwrite" },
+    "device-storage:sdcard":{ "access": "readwrite" },
+    "device-storage:apps":{ "access": "readwrite" },
+    "firefox-accounts":{},
+    "fmradio":{},
+    "geolocation":{},
+    "idle":{},
+    "mobileid":{},
+    "mobilenetwork":{},
+    "mobileconnection":{},
+    "moz-extremely-unstable-and-will-change-webcomponents":{},
+    "nfc":{},
+    "open-remote-window":{},
+    "permissions":{},
+    "power":{},
+    "presentation-device-manage":{},
+    "secureelement-manage":{},
+    "settings":{"access": "readwrite"},
+    "sms":{},
+    "systemXHR":{},
+    "telephony":{},
+    "themeable":{},
+    "time":{},
+    "video-capture": {"description": "Required to capture video using getUserMedia()"},
+    "voicemail":{},
+    "webapps-manage":{},
+    "wifi-manage":{}
+  },
+
+  "activities": {
+    "view": {
+      "filters": {
+        "type": [ "url", "application/pdf" ],
+        "url": { "required":true, "pattern":"mailto:.{1,16384}", "regexp":"^mailto:" }
+      },
+      "disposition": "window",
+      "href": "/index.html",
+      "returnValue": true
+    }
+  },
+
+    "datastores-owned":{
+    "homescreen_settings": {
+      "access": "readwrite",
+      "description": "Stores home screen settings"
+    }
+  }
+}

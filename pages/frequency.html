@@ -1,0 +1,19 @@
+<div class="text-center">
+        <a href="#/"><span class="glyphicon glyphicon-home nav-icons"></span></a>
+        <a href="#/access-info/{{appid}}"><span class="glyphicon glyphicon-backward nav-icons"></span></a>
+        <br/>
+<h1 class="page-heading">Frequency of {{appid}} accessing {{serviceId}} service from past one week</h1>
+<br/>
+
+<div ng-repeat="(d, service) in services" class="day-stats">
+    <h5>{{d}}</h5>
+    <ul>
+        <li ng-repeat="s in service">{{ (s.timestamp * 1000) | date:"medium"}}</li>
+    </ul>
+</div>
+<br/>
+<br/>
+ <a href="#/chart/{{appid}}/{{serviceId}}" class="btn btn-raised btn-primary" data-transition="slide"> Graphical View </a> 
+
+
+<!-- style="width: 60%; padding: 8px 15px;" -->
